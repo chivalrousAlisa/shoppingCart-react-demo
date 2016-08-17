@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>react-购物车</title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="react/react.js"></script>
+    <script src="react/react-dom.js"></script>
+    <script src="react/browser.min.js"></script>
+    <script src="react/jquery-1.8.1.min.js"></script>
+    <script src="react/message.js"></script>
+</head>
+<body>
+<div id="container" class="container"></div>
+</body>
+<script src="js/index.js" type="text/babel"></script>
+<script>
+    //放在react中无效，先放这里
+    $("body").click(function(){
+        $("#listBox").hide();
+    });
+    $("body").on("click","#D_search",function(event){
+        event.stopPropagation();
+    })
+//    function fun(){
+//        var el=document.getElementById("listBox");
+//        el.style.display="none";
+//        console.log("body");
+//    }
+//    var body=document.body;
+//    body.addEventListener("click",fun,false);
+</script>
+</html>

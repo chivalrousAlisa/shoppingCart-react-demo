@@ -1,0 +1,327 @@
+body,div,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,p,blockquote,pre,form,fieldset,legend,input,button,textarea,hr,abbr,acronym,address,applet,article,aside,section,header,footer,audio,table,tbody,td,tfoot,th,thead{margin:0;padding:0;}
+li,ol,ul{list-style:none;}
+table{border-collapse:collapse;}
+body{
+  font-family: "微软雅黑", tahoma, arial, Hiragino Sans GB, '\5b8b\4f53', sans-serif;
+  padding-top:100px;
+}
+
+.fn-hide{
+  display:none;
+}
+
+@url:'images/';
+@gray:#ccc;@blue:#5bc0de;@red:#f50;
+@size3:3px;@size5:5px;@size10:10px;@size15:15px;@size20:20px;
+.roundedCorners(@radius:5px){
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -o-border-radius: @radius;
+  -ms-border-radius:@radius;
+  border-radius: @radius;
+}
+.borderbox{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+}
+.boxShadow(@x:0,@y:0,@blur:1px,@color:#000){
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+
+.container{
+  width:1200px;
+  margin:0 auto;
+}
+
+.form-part{
+  button{
+    padding:7px @size10;
+    background:@blue;
+    cursor:pointer;
+    margin-top:@size3;
+    &:hover{
+      background:#31b0d5;
+      border-color:#269abc;
+    }
+    border:1px solid #46b8da;
+    outline: none;
+    color:#fff;
+    .roundedCorners(4px);
+  }
+  form{
+    float:right;
+    position:relative;
+    input{
+      outline:none;
+    }
+    .sercon{
+      border: 3px solid #f50;
+      border-right: none;
+      height: 30px;
+      width: 340px;
+      margin-right: -16px;
+      padding-left:@size10;
+    }
+    .searSub{
+      background: #f53;
+      color: #fff;
+      border: none;
+      padding: 0 30px;
+      font-size: 18px;
+      height: 36px;
+      margin-left: -2px;
+      position: relative;
+      top: 2px;
+      padding-top: 2px;
+      cursor:pointer;
+    }
+  }
+}
+
+/*****搜索框ul样式*******/
+.listBox{
+  box-sizing: border-box;
+  width:336px;
+  border:1px solid @red;
+  border-top:none;
+  position:absolute;
+  background:#fff;
+  z-index:888;
+  display: none;
+}
+.listBox li{
+  padding:3px 10px;
+
+  cursor:pointer;
+}
+.listBox li:hover{
+  background:#ddd;
+}
+
+.table-part{
+  margin-top:@size20;
+  table{
+    border:1px solid @gray;
+    width:100%;
+    tr{
+      border-bottom:1px solid @gray;
+      &:nth-child(2n){
+        background:#FFF8E1;
+      }
+    }
+    th{
+      font-weight:600;
+    }
+    th,td{
+      padding:@size5 @size15;
+      text-align:left;
+      font-size:14px;
+    }
+    .goods-details{
+      position:relative;
+      cursor:pointer;
+      &:hover .edit{
+        display: block;
+      }
+      .edit{
+        position:absolute;
+        right:@size15;
+        top:0;
+        font-size:10px;
+        color:@red;
+        cursor: pointer;
+        display: none;
+      }
+      .editBox{
+        .borderbox;
+        position:absolute;
+        width:100%;
+        padding-right:15px;
+        z-index: 888;
+        display:none;
+      }
+      .textareaBox{
+        width:100%;
+        height:100px;
+        background:#fff;
+        border:1px dotted @red;
+        textarea{
+          .borderbox;
+          width:100%;
+          height:100%;
+          border:none;
+          padding:5px;
+          line-height: 1.2;
+        }
+      }
+      .goods-details-inner{
+          max-width:500px;
+          white-space:nowrap;
+          text-overflow:ellipsis;
+          overflow:hidden;
+      }
+      .editBoxBtn{
+        width:100%;
+        background:#fff;
+        border:1px dotted @red;
+        padding:10px 0;
+        border-top:none;
+        text-align:right;
+        cursor:default;
+        a{
+          margin:5px;
+          text-decoration: none;
+          font-size:12px;
+        }
+        .okBtn{
+          .roundedCorners(4px);
+          color:#fff;
+          background:@red;
+          padding:3px 10px;
+        }
+        .cancelBtn{
+          color:#0b72a4;
+          margin-right:10px;
+          &:hover{
+            color:@red;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .count{
+      width:15px;
+      padding:2px 9px;
+      text-align:center;
+    }
+    .autoCount{
+      display:inline-block;
+      border:1px solid #ccc;
+      text-decoration:none;
+      height:21px;
+      line-height: 21px;
+      position: relative;
+      top: 1px;
+      width: 15px;
+      text-align: center;
+      background: #eee;
+      color:black;
+      &:hover{
+        border:1px solid @red;
+      }
+    }
+    .delete{
+      cursor:pointer;
+      color:@red;
+    }
+  }
+}
+
+
+.J_diaContainer{
+  display: none;
+}
+.dislogCon{
+  position:fixed;
+  left:50%;
+  top:50%;
+  width:400px;
+  margin-left:-200px;
+  height:340px;
+  margin-top:-170px;
+  background:#fff;
+  .roundedCorners;
+  font-size:14px;
+  padding:15px;
+}
+.disTit{
+  border-bottom:1px solid @gray;
+  margin-bottom: 25px;
+  padding-bottom:15px;
+}
+.goodsMessage-items{
+  width:262px;
+  margin:15px auto;
+  label{
+    display: inline-block;
+    width:70px;
+    text-align: right;
+    margin-right:10px;
+  }
+  input{
+    height:20px;
+    padding:3px @size5;
+    .roundedCorners(4px);
+    border:1px solid @gray;
+    }
+  }
+.btnGroup{
+  text-align: right;
+  margin-top:25px;
+  padding-top:15px;
+  border-top:1px solid @gray;
+  button{
+    padding:5px @size10;
+    cursor:pointer;
+    outline: none;
+    .roundedCorners(4px);
+    margin:0 5px;
+  }
+  .confirmBtn{
+    background:@blue;
+    &:hover{
+      background:#31b0d5;
+      border-color:#269abc;
+    }
+    border:1px solid #46b8da;
+    color:#fff;
+  }
+  .cancelBtn{
+    background:transparent;
+    border:1px solid @gray;
+    margin-right:0;
+    &:hover{
+      background:#eee;
+    }
+  }
+}
+
+/*******表格中的分页样式******/
+.paginationBox{
+  float:right;
+  margin-top:@size15;
+  margin-bottom:@size20;
+  overflow: hidden;
+  font-size:14px;
+  li{
+    float:left;
+    color:@red;
+    margin:0 5px;
+    width:30px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    border:1px solid @gray;
+    cursor:pointer;
+    &:first-child{
+      width:65px;
+    }
+    &:last-child{
+      width:65px;
+      margin-right:0;
+    }
+    &:hover{
+      border:1px solid darken(@red,15%);
+    }
+  }
+  li.active{
+    background:@red;
+    color:#fff;
+  }
+
+}

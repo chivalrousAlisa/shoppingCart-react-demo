@@ -1,0 +1,376 @@
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+p,
+blockquote,
+pre,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+hr,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+section,
+header,
+footer,
+audio,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead {
+  margin: 0;
+  padding: 0;
+}
+li,
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+}
+body {
+  font-family: "微软雅黑", tahoma, arial, Hiragino Sans GB, '\5b8b\4f53', sans-serif;
+  padding-top: 100px;
+}
+.fn-hide {
+  display: none;
+}
+.borderbox {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.form-part button {
+  padding: 7px 10px;
+  background: #5bc0de;
+  cursor: pointer;
+  margin-top: 3px;
+  border: 1px solid #46b8da;
+  outline: none;
+  color: #fff;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+}
+.form-part button:hover {
+  background: #31b0d5;
+  border-color: #269abc;
+}
+.form-part form {
+  float: right;
+  position: relative;
+}
+.form-part form input {
+  outline: none;
+}
+.form-part form .sercon {
+  border: 3px solid #f50;
+  border-right: none;
+  height: 30px;
+  width: 340px;
+  margin-right: -16px;
+  padding-left: 10px;
+}
+.form-part form .searSub {
+  background: #f53;
+  color: #fff;
+  border: none;
+  padding: 0 30px;
+  font-size: 18px;
+  height: 36px;
+  margin-left: -2px;
+  position: relative;
+  top: 2px;
+  padding-top: 2px;
+  cursor: pointer;
+}
+/*****搜索框ul样式*******/
+.listBox {
+  box-sizing: border-box;
+  width: 336px;
+  border: 1px solid #f50;
+  border-top: none;
+  position: absolute;
+  background: #fff;
+  z-index: 888;
+  display: none;
+}
+.listBox li {
+  padding: 3px 10px;
+  cursor: pointer;
+}
+.listBox li:hover {
+  background: #ddd;
+}
+.table-part {
+  margin-top: 20px;
+}
+.table-part table {
+  border: 1px solid #ccc;
+  width: 100%;
+}
+.table-part table tr {
+  border-bottom: 1px solid #ccc;
+}
+.table-part table tr:nth-child(2n) {
+  background: #FFF8E1;
+}
+.table-part table th {
+  font-weight: 600;
+}
+.table-part table th,
+.table-part table td {
+  padding: 5px 15px;
+  text-align: left;
+  font-size: 14px;
+}
+.table-part table .goods-details {
+  position: relative;
+  cursor: pointer;
+}
+.table-part table .goods-details:hover .edit {
+  display: block;
+}
+.table-part table .goods-details .edit {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  font-size: 10px;
+  color: #f50;
+  cursor: pointer;
+  display: none;
+}
+.table-part table .goods-details .editBox {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  padding-right: 15px;
+  z-index: 888;
+  display: none;
+}
+.table-part table .goods-details .textareaBox {
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  border: 1px dotted #f50;
+}
+.table-part table .goods-details .textareaBox textarea {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 5px;
+  line-height: 1.2;
+}
+.table-part table .goods-details .goods-details-inner {
+  max-width: 500px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.table-part table .goods-details .editBoxBtn {
+  width: 100%;
+  background: #fff;
+  border: 1px dotted #f50;
+  padding: 10px 0;
+  border-top: none;
+  text-align: right;
+  cursor: default;
+}
+.table-part table .goods-details .editBoxBtn a {
+  margin: 5px;
+  text-decoration: none;
+  font-size: 12px;
+}
+.table-part table .goods-details .editBoxBtn .okBtn {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  color: #fff;
+  background: #f50;
+  padding: 3px 10px;
+}
+.table-part table .goods-details .editBoxBtn .cancelBtn {
+  color: #0b72a4;
+  margin-right: 10px;
+}
+.table-part table .goods-details .editBoxBtn .cancelBtn:hover {
+  color: #f50;
+  text-decoration: underline;
+}
+.table-part table .count {
+  width: 15px;
+  padding: 2px 9px;
+  text-align: center;
+}
+.table-part table .autoCount {
+  display: inline-block;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  height: 21px;
+  line-height: 21px;
+  position: relative;
+  top: 1px;
+  width: 15px;
+  text-align: center;
+  background: #eee;
+  color: black;
+}
+.table-part table .autoCount:hover {
+  border: 1px solid #f50;
+}
+.table-part table .delete {
+  cursor: pointer;
+  color: #f50;
+}
+.J_diaContainer {
+  display: none;
+}
+.dislogCon {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 400px;
+  margin-left: -200px;
+  height: 340px;
+  margin-top: -170px;
+  background: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 15px;
+}
+.disTit {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+}
+.goodsMessage-items {
+  width: 262px;
+  margin: 15px auto;
+}
+.goodsMessage-items label {
+  display: inline-block;
+  width: 70px;
+  text-align: right;
+  margin-right: 10px;
+}
+.goodsMessage-items input {
+  height: 20px;
+  padding: 3px 5px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.btnGroup {
+  text-align: right;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #ccc;
+}
+.btnGroup button {
+  padding: 5px 10px;
+  cursor: pointer;
+  outline: none;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  margin: 0 5px;
+}
+.btnGroup .confirmBtn {
+  background: #5bc0de;
+  border: 1px solid #46b8da;
+  color: #fff;
+}
+.btnGroup .confirmBtn:hover {
+  background: #31b0d5;
+  border-color: #269abc;
+}
+.btnGroup .cancelBtn {
+  background: transparent;
+  border: 1px solid #ccc;
+  margin-right: 0;
+}
+.btnGroup .cancelBtn:hover {
+  background: #eee;
+}
+/*******表格中的分页样式******/
+.paginationBox {
+  float: right;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  font-size: 14px;
+}
+.paginationBox li {
+  float: left;
+  color: #f50;
+  margin: 0 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.paginationBox li:first-child {
+  width: 65px;
+}
+.paginationBox li:last-child {
+  width: 65px;
+  margin-right: 0;
+}
+.paginationBox li:hover {
+  border: 1px solid #b33b00;
+}
+.paginationBox li.active {
+  background: #f50;
+  color: #fff;
+}
